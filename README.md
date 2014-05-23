@@ -1,6 +1,6 @@
 ## Brush
 
-A [Responsive]((http://www.adamkaplan.me/grid/) brush for [Stylus](http://learnboost.github.io/stylus/). 
+A [Responsive](http://www.adamkaplan.me/grid/) brush for [Stylus](http://learnboost.github.io/stylus/).
 
 ## Usage
 
@@ -20,15 +20,15 @@ Run the default task:
 
     gulp
 
-This builds, minifies, uglifies [stylus, js, jade] and runs a static server at localhost:8080.
+This builds, minifies, uglifies _stylus_, _js_, _jade_ and runs a [connect](https://github.com/intesso/connect-livereload) static server, with LiveReload at **http://localhost:8080**.
 
 Chrome users can download [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) and enjoy live coding and preview.
 
-The final output sits nicely under /app so you can sync it to S3.
+Sync /app with S3, and you're good to go.
 
 ## Status
 
-Pre-Alpha.
+Experimental.
 
 ## Copyright & License
 
