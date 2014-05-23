@@ -1,6 +1,6 @@
 ## Brush
 
-A [Responsive](http://www.adamkaplan.me/grid/) brush for [Stylus](http://learnboost.github.io/stylus/). Made with [Jade](http://jade-lang.com) and [Gulp](http://gulpjs.com)&mdash;in Coffeescript.
+A [Responsive](http://www.adamkaplan.me/grid/) brush for [Stylus](http://learnboost.github.io/stylus/). Made with  with [Jade](http://jade-lang.com), and built with [Gulp](http://gulpjs.com)&mdash;in Coffeescript.
 
 ## Usage
 
@@ -22,7 +22,7 @@ Run the default task:
 
 This compiles, minifies, uglifies _stylus_, _coffee_, _jade_ templates into optimized HTML5/CSS3/Javascript and runs a [connect](https://github.com/intesso/connect-livereload) static server with LiveReload at **http://localhost:8080**.
 
-Enjoy [live coding]([LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) with Chrome.
+Enjoy [live coding](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) with Chrome.
 
 Sync /app with S3.
 
@@ -30,6 +30,10 @@ Sync /app with S3.
 
 Experimental.
 
-## Copyright & License
+## Credits
+
+The initial baseline is ported from the excellent [grid.css](http://www.adamkaplan.me/grid/) by Adam Kaplan.
+
+## License
 
 MIT License. See [LICENSE](/LICENSE) for more details.

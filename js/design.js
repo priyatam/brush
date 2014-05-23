@@ -18,10 +18,10 @@ $(function() {
 
     // flowtype typography
     $('.haiku').flowtype({
-        minimum: 400,
+        minimum: 480,
         maximum: 1600,
-        minFont: 8,
-        maxFont: 64,
+        minFont: 12,
+        maxFont: 32,
     });
 
 });

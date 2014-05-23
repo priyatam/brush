@@ -1,43 +1,29 @@
-body
-  background-color #f2f2f2
-  color #555
+/* Ported from http://www.adamkaplan.me/grid/ */
+
+*, *:before, *:after
+  -moz-box-sizing border-box
+  -webkit-box-sizing border-box
+  box-sizing border-box
+
+html
+  font 100%/1.5 "Open Sans" sans-serif
+  font-weight 400
+  text-rendering optimizeLegibility
   -webkit-font-smoothing antialiased
-  -webkit-overflow-scrolling touch
-  border 10px
-  padding 10px
-  margin 10px
 
-header
-  background-color transparent
+@media (min-width 40rem)
+  html
+    font-size 112%
+
+@media (min-width 64rem)
+  html
+    font-size 120%
+
+body
+  background-color #fff
+  color #555
+
+.container
   margin 0 auto
-  overflow hidden
-  padding 1.5% 10% 1%
-  width 100%
-  border-radius 10px
-  -moz-border-radius 10px
-  -webkit-border-radius 10px
-  -khtml-border-radius 10px
-
-a
-  text-decoration none
-  padding 1px
-  color inherit
-
-a:hover
-    color #00A0C6
-    text-decoration none
-    cursor pointer
-
-ul
-  font-size 1em
-  font-weight 100
-
-hr
-  display block
-  height 1px
-  border 0
-  border-top 1px solid #ccc
-  margin 1em 0
-  padding 0
-
-
+  max-width 53rem
+  width 90%

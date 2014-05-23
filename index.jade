@@ -12,8 +12,6 @@ head
   // Fonts
   link(rel='stylesheet' href='//brick.a.ssl.fastly.net/EB+Garamond:400,400i/Open+Sans:400,700')
   link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Alegreya+Sans:400')
-  link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Libre+Baskerville:400')
-  link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Montserrat:400')
 
   // Styles
   link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css')
@@ -29,22 +27,36 @@ head
   script(src='/brush.min.js')
 
 body
-  .container
+  .container.grid
 
     .row.clearfix
+      .column.fourth
+
+        a(href="#authors/basho" class='title') Basho
+
+        p.haiku
+          |  Autumn Moonlight&mdash;
+          |  a worm digs silently
+          |  into the chestnut.
+
+        dd.metadata
+          a(href='#time/600-BC') 1530
+          a(href='#search?query=love+show=any') nature
+          a(href='#search?query=lyric+show=any') seasons
+          a(href='#search?query=memory+show=any') worm
 
       .column.fourth
 
         a(href="#authors/basho" class='title') Basho
 
         p.haiku
-          |  Autumn Moonlight&mdash;<br/>
-          |  a worm digs silently<br/>
-          |  into the chestnut.<br/>
+          |  Autumn Moonlight&mdash;
+          |  a worm digs silently
+          |  into the chestnut.
 
         dd.metadata
-          a(href='#countries/greece') Japan
-            a(href='#time/600-BC') 1530
-            a(href='#search?query=love+show=any') nature
-            a(href='#search?query=lyric+show=any') seasons
-            a(href='#search?query=memory+show=any') worm
+          a(href='#time/600-BC') 1530
+          a(href='#search?query=love+show=any') nature
+          a(href='#search?query=lyric+show=any') seasons
+          a(href='#search?query=memory+show=any') worm
+

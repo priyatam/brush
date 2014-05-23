@@ -15,20 +15,19 @@ open        = require 'gulp-open'
 config =
   root: path.resolve('./')
   styles: './css/**/*.styl'
-  styles_lib: './css/lib/**/*.css'
   templates: './*.jade'
   scripts: ['./js/**/*.js', './js/**/*.coffee']
   app: 'app'
   app_index: './app/index.html'
   app_script: 'brush.min.js'
   app_style: 'brush.min.css'
-  app_vendor_styles: 'brush.vendors.min.css'
   port: 8080
+
 
 gulp.task 'clean', ->
   files = [ config.app + '/*.js',
             config.app + '/*.css',
-            config.app + '/*.html' ]
+            config.app + '/*.html']
 
   gulp.src files ->
     read: false
@@ -48,13 +47,6 @@ gulp.task 'build-styles', ->
     .pipe concat config.app_style
     .pipe gulp.dest config.app
       .pipe connect.reload()
-
-gulp.task 'build-styles-lib', ->
-  gulp.src config.styles_lib
-    .pipe stylus errors: true
-    .pipe minifyCSS keepBreaks: true
-    .pipe concat config.app_vendor_styles
-    .pipe gulp.dest config.app
 
 gulp.task 'build-scripts', ->
   gulp.src config.scripts
@@ -84,5 +76,5 @@ gulp.task 'watch', ->
     gulp.watch(config.scripts, ['build-scripts'])
 
 
-gulp.task('build', ['build-templates', 'build-styles', 'build-styles-lib', 'build-scripts'])
+gulp.task('build', ['build-templates', 'build-styles', 'build-scripts'])
 gulp.task('default', ['build', 'start-server', 'open', 'watch'])

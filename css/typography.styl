@@ -1,128 +1,60 @@
-header
-  font-size 2em
-  font-weight 200
+/* Ported from http://www.adamkaplan.me/grid/ */
+
+h1, h2, h3, h4, h5
+  font-weight 600
+  margin 0
+
+h1
+  font-size: 1.3rem
+  line-height: 1.3em
+  margin-bottom: 1.5rem
+
+@media (min-width: 40rem)
+  h1
+    font-size 1.5rem
+
+h3
+  font-size 1.2rem
+  margin-bottom .5rem
+
 
 h1,h2,h3,h4,h5,h6,p
   line-height 1.45
+
+p
+  color #999
+  margin 0 auto
+  max-width 30rem
+
+blockquote
+  margin 0
+
+blockquote p
+  color #bbb
+  font-style italic
+  margin-bottom 1.5rem
+
+cite
+  color #bbb
+
+code
+  background-color #f8f8f8
+  -moz-border-radius 3px
+  -webkit-border-radius 3px
+  border-radius 3px
+  border 1px solid #ddd
+  font-family Consolas "Liberation Mono" Courier monospace
+  font-size 0.8rem
+  padding 0.1rem 0.3rem
+  position relative
+  top -1px
+  white-space nowrap
+
+header
+  font-size 2em
+  font-weight 200
 
 body
   font-family 'Alegreya Sans', sans-serif
   font-size 18px
 
-footer
-  font-size 1em
-  font-weight 100
-
-h1
-  font-size 3em
-  font-weight 300
-
-h2
-  font-size 3em
-  font-weight 300
-  font-style italic
-
-h3
-  font-size 2em
-  font-weight 200
-
-h4
-  font-size 2em
-  font-weight 200
-  font-style italic
-
-h5
-  font-size 2em
-  font-weight 200
-
-h6
-  font-size 2em
-  font-weight 200
-  font-style italic
-
-p.pt8
-  font-size 0.5em
-  font-weight 50
-
-p.pt10
-  font-size 0.66em
-  font-weight 66
-
-p.pt12
-  font-size 0.75em
-  font-weight 75
-
-p.pt16
-  font-size 1em
-  font-weight 100
-
-p.pt24
-  font-size 1.5em
-  font-weight 100
-
-p.pt36
-  font-size 2.25em
-  font-weight 225
-
-p.pt48
-  font-size 3em
-  font-weight 300
-
-p.pt64
-  font-size 4em
-  font-weight 400
-
-dd
-  text-decoration overline
-  font-style italic
-  font-weight 100
-
-/* Haiku Typesetting */
-
-#haiper section
-  padding-top 1.5em
-
-.haiku
-  whitespace pre
-  font-family 'EB Garamond', serif
-  font-size 1em
-  font-weight 100
-  text-align center
-  border 1px dotted DarkBlue
-  padding 10px
-
-.author
-  font-weight bold
-  text-transform capitalize
-  text-decoration overline
-  text-align center
-
-.title
-  font-size 0.5em
-  font-weight 50
-  text-transform uppercase
-  text-align left
-  display block
-
-.metadata
-  font-size 50%
-  padding 10px
-  text-align center
-  margin 10px 10px
-
-dd.metadata
-  text-decoration overline
-
-/* Presets */
-
-.ancient
-  font-family 'Libre Baskerville' serif
-
-.medieval
-  font-family 'Alegreya Sans', sans-serif
-
-.modern
-  font-family 'EB Garamond' serif
-
-.robot
-  font-family 'Roboto' sans-serif
