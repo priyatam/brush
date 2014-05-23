@@ -1,0 +1,37 @@
+{
+    "name": "brush",
+    "version": "0.1.0",
+    "description": "A Responsive Brush for Stylus",
+    "author": "Priyatam Mudivarti",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/priyatam/brush.git"
+    },
+    "bugs": {
+        "url": "https://github.com/priyatam/brush/issues"
+    },
+    "keywords": [
+        "css3",
+        "stylus",
+        "rwd",
+        "typography"
+    ],
+    "main": "gulpfile",
+    "devDependencies": {
+        "gulp": "3.6.2",
+        "gulp-jade": "0.5.0",
+        "gulp-stylus": "1.0.1",
+        "gulp-minify-css": "0.3.4",
+        "gulp-uglify": "0.2.1",
+        "gulp-connect": "2.0.5",
+        "gulp-changed": "0.3.0",
+        "gulp-concat": "2.2.0",
+        "gulp-open": "0.2.8",
+        "gulp-rename": "1.2.0",
+        "gulp-util": "^2.2.14"
+    },
+    "dependencies": {
+        "jquery": "~2.1.0",
+        "underscore": "~1.6.0"
+    }
+}

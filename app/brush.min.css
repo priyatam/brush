@@ -1,0 +1,36 @@
+body{background-color:#f2f2f2;color:#555;-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;border:10px;padding:10px;margin:10px}
+header{background-color:transparent;margin:0 auto;overflow:hidden;padding:1.5% 10% 1%;width:100%;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;-khtml-border-radius:10px}
+a{text-decoration:none;padding:1px;color:inherit}
+a:hover{color:#00a0c6;text-decoration:none;cursor:pointer}
+ul{font-size:1em;font-weight:100}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+.container row{border:0}
+header{font-size:2em;font-weight:200}
+h1,h2,h3,h4,h5,h6,p{line-height:1.45}
+body{font-family:'Alegreya Sans',sans-serif;font-size:18px}
+footer{font-size:1em;font-weight:100}
+h1{font-size:3em;font-weight:300}
+h2{font-size:3em;font-weight:300;font-style:italic}
+h3{font-size:2em;font-weight:200}
+h4{font-size:2em;font-weight:200;font-style:italic}
+h5{font-size:2em;font-weight:200}
+h6{font-size:2em;font-weight:200;font-style:italic}
+p.pt8{font-size:.5em;font-weight:50}
+p.pt10{font-size:.66em;font-weight:66}
+p.pt12{font-size:.75em;font-weight:75}
+p.pt16{font-size:1em;font-weight:100}
+p.pt24{font-size:1.5em;font-weight:100}
+p.pt36{font-size:2.25em;font-weight:225}
+p.pt48{font-size:3em;font-weight:300}
+p.pt64{font-size:4em;font-weight:400}
+dd{text-decoration:overline;font-style:italic;font-weight:100}
+#haiper section{padding-top:1.5em}
+.haiku{whitespace:pre;font-family:'EB Garamond',serif;font-size:1em;font-weight:100;text-align:center;border:1px dotted #00008b;padding:10px}
+.author{font-weight:700;text-transform:capitalize;text-decoration:overline;text-align:center}
+.title{font-size:.5em;font-weight:50;text-transform:uppercase;text-align:left;display:block}
+.metadata{font-size:50%;padding:10px;text-align:center;margin:10px}
+dd.metadata{text-decoration:overline}
+.ancient{font-family:'Libre Baskerville' serif}
+.medieval{font-family:'Alegreya Sans',sans-serif}
+.modern{font-family:'EB Garamond' serif}
+.robot{font-family:Roboto sans-serif}
