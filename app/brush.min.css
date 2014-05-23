@@ -4,7 +4,6 @@ a{text-decoration:none;padding:1px;color:inherit}
 a:hover{color:#00a0c6;text-decoration:none;cursor:pointer}
 ul{font-size:1em;font-weight:100}
 hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
-.container row{border:0}
 header{font-size:2em;font-weight:200}
 h1,h2,h3,h4,h5,h6,p{line-height:1.45}
 body{font-family:'Alegreya Sans',sans-serif;font-size:18px}
