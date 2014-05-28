@@ -17,11 +17,6 @@ $(function() {
     });
 
     // flowtype typography
-    $('.haiku').flowtype({
-        minimum: 480,
-        maximum: 1600,
-        minFont: 12,
-        maxFont: 32,
-    });
+
 
 });
