@@ -20,7 +20,8 @@ Run the default task:
 
     gulp --require coffee-script/register
 
-This compiles, minifies, uglifies _stylus_, _coffee_, _jade_ templates into optimized HTML5/CSS3/Javascript and runs a [connect](https://github.com/intesso/connect-livereload) static server with LiveReload at **http://localhost:8080**.
+This compiles, minifies, uglifies _stylus_, _coffee_, _jade_ templates into optimized HTML5/CSS3/Javascript
+and runs a [connect](https://github.com/intesso/connect-livereload) static server with LiveReload at **http://localhost:8080**.
 
 Enjoy [live coding](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) with Chrome.
 
