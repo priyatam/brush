@@ -1,3 +1,6 @@
+# Ignore AWS credentials
+.aws.json
+
 # Ignore generated styles
 css/layout.css
 css/print.css

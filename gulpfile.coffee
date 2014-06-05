@@ -25,6 +25,7 @@ config =
   app_style: 'brush.min.css'
   port: 8080
 
+credentials = JSON.parse(fs.readFileSync('.aws.json', 'utf8'));
 
 gulp.task 'clean', ->
   files = [ config.app + '/*.js',
