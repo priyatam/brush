@@ -8,7 +8,6 @@ If you've never used npm before, install Node with [homebrew](http://brew.sh/):
 
     brew install node
 
-
 Install [Coffeescript](http://gulpjs.com), globally:
 
     npm install -g coffee-script
@@ -25,6 +24,15 @@ Create an alias:
 
     alias gulp='gulp --require coffee-script/register'
 
+If you have an amazon S3 account, then create a .aws.json key file in the root (see `gulp publish`).
+
+  {
+    "key": "",
+    "secret": "",
+    "bucket": ""
+  }
+
+
 ## Usage
 
 Run the default task:
@@ -36,9 +44,12 @@ and runs a [connect](https://github.com/intesso/connect-livereload) static serve
 
 Enjoy [Live coding](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) with Chrome.
 
-Sync /app with S3.
+Sync /app with S3:
 
     gulp publish
+
+
+Enjoy brushing with Stylus!
 
 ## Status
 
