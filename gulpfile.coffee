@@ -1,6 +1,5 @@
 gulp        = require 'gulp'
 stylus      = require 'gulp-stylus'
-nib         = require 'nib'
 jade        = require 'gulp-jade'
 coffee      = require 'gulp-coffee'
 connect     = require 'gulp-connect'
@@ -12,6 +11,7 @@ changed     = require 'gulp-changed'
 concat      = require 'gulp-concat'
 open        = require 'gulp-open'
 aws         = require 'gulp-awspublish'
+fs          = require 'fs'
 
 
 config =
@@ -45,7 +45,7 @@ gulp.task 'build-templates', ->
 
 gulp.task 'build-styles', ->
   gulp.src config.styles
-    .pipe stylus use: [nib()], errors: true
+    .pipe stylus errors: true
     .pipe minifyCSS keepBreaks: true
     .pipe concat config.app_style
     .pipe gulp.dest config.app
@@ -84,7 +84,6 @@ gulp.task 'publish', ->
     'Cache-Control': 'max-age=315360000, no-transform, public'
 
   gulp.src('./app/*.*')
-    .pipe aws.gzip ext: '.gz'
     .pipe publisher.publish(headers)
     .pipe publisher.cache()
     .pipe aws.reporter()

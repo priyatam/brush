@@ -1,6 +1,6 @@
 {
     "name": "brush",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "A Responsive Brush for Stylus",
     "author": "Priyatam Mudivarti",
     "repository": {
@@ -18,7 +18,6 @@
     ],
     "main": "gulpfile",
     "devDependencies": {
-        "coffee-script": "1.7.1",
         "gulp": "3.6.2",
         "gulp-coffee": "1.4.3",
         "gulp-jade": "0.5.0",
@@ -34,7 +33,6 @@
         "gulp-util": "^2.2.14"
     },
     "dependencies": {
-        "jquery": "~2.1.0",
-        "underscore": "~1.6.0"
+        "jquery": "~2.1.0"
     }
 }
