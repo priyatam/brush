@@ -1,7 +1,7 @@
 {
     "name": "brush",
-    "version": "0.1.1",
-    "description": "A Responsive Brush for Stylus",
+    "version": "0.1.2",
+    "description": "A Responsive Brush for Stylus and Jade",
     "author": "Priyatam Mudivarti",
     "repository": {
         "type": "git",
@@ -33,6 +33,7 @@
         "gulp-util": "^2.2.14"
     },
     "dependencies": {
-        "jquery": "~2.1.0"
+        "jquery": "~2.1.0",
+        "nib": "^1.0.2"
     }
 }
