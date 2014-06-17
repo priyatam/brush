@@ -1,5 +1,6 @@
 gulp        = require 'gulp'
 stylus      = require 'gulp-stylus'
+nib         = require 'nib'
 jade        = require 'gulp-jade'
 coffee      = require 'gulp-coffee'
 connect     = require 'gulp-connect'
@@ -12,7 +13,6 @@ concat      = require 'gulp-concat'
 open        = require 'gulp-open'
 aws         = require 'gulp-awspublish'
 fs          = require 'fs'
-
 
 config =
   root: path.resolve('./')
@@ -45,7 +45,7 @@ gulp.task 'build-templates', ->
 
 gulp.task 'build-styles', ->
   gulp.src config.styles
-    .pipe stylus errors: true
+    .pipe stylus (use: [nib()], errors: true)
     .pipe minifyCSS keepBreaks: true
     .pipe concat config.app_style
     .pipe gulp.dest config.app
