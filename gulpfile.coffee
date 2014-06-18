@@ -13,19 +13,11 @@ concat      = require 'gulp-concat'
 open        = require 'gulp-open'
 aws         = require 'gulp-awspublish'
 fs          = require 'fs'
+args        = require('yargs').argv;
 
-config =
-  root: path.resolve('./')
-  styles: './css/**/*.styl'
-  templates: './*.jade'
-  scripts: ['./js/**/*.js', './js/**/*.coffee']
-  app: 'app'
-  app_index: './app/index.html'
-  app_script: 'brush.min.js'
-  app_style: 'brush.min.css'
-  port: 8080
 
-credentials = JSON.parse(fs.readFileSync('.aws.json', 'utf8'));
+config_file = if args.config? then args.config else path.resolve('./config.json')
+config = JSON.parse(fs.readFileSync(config_file, 'utf8'));
 
 gulp.task 'clean', ->
   files = [ config.app + '/*.js',
@@ -59,6 +51,10 @@ gulp.task 'build-scripts', ->
     .pipe gulp.dest config.app
     .pipe connect.reload()
 
+gulp.task 'copy-brush-assets', ->
+  gulp.src 'dist'
+    .pipe gulp.dest 'examples/app'
+
 gulp.task 'start-server', ->
   connect.server
     root: config.app
@@ -70,7 +66,7 @@ gulp.task 'open', ->
     url: "http://localhost:" + config.port
     app: "google chrome"
 
-  gulp.src config.app_index
+  gulp.src config.app + '/index.html'
     .pipe open("", options)
 
 gulp.task 'watch', ->
@@ -79,14 +75,18 @@ gulp.task 'watch', ->
     gulp.watch(config.scripts, ['build-scripts'])
 
 gulp.task 'publish', ->
+  credentials = JSON.parse(fs.readFileSync('.aws.json', 'utf8'));
   publisher = aws.create(credentials)
+
   headers =
     'Cache-Control': 'max-age=315360000, no-transform, public'
 
-  gulp.src('./app/*.*')
+  gulp.src config.app + '*.*'
     .pipe publisher.publish(headers)
     .pipe publisher.cache()
     .pipe aws.reporter()
 
 gulp.task('build', ['build-templates', 'build-styles', 'build-scripts'])
-gulp.task('default', ['build', 'start-server', 'open', 'watch'])
+gulp.task('serve', ['build', 'start-server', 'open', 'watch'])
+gulp.task('default', ['build'])
+

@@ -1,11 +1,10 @@
+# Ignore generated site
+examples/app
+
 # Ignore AWS credentials
 .aws.json
 
-# Ignore generated styles
-css/layout.css
-css/print.css
-css/typography.css
-
+# Standard ignores
 build
 .*.swp
 ._*

@@ -1,0 +1,9 @@
+{
+  "styles": "./examples/*.styl",
+  "templates": "./examples/*.jade",
+  "scripts": ["./examples/*.js"],
+  "app": "./examples/app",
+  "app_script": "index.min.js",
+  "app_style": "index.min.css",
+  "port": 8080
+}

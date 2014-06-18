@@ -1,0 +1,9 @@
+{
+  "styles": "./lib/css/**/*.styl",
+  "templates": "./lib/templates/*.jade",
+  "scripts": ["./lib/js/**/*.js"],
+  "app": "dist",
+  "app_script" : "brush.min.js",
+  "app_style": "brush.min.css",
+  "port": 8080
+}

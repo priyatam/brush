@@ -1,0 +1,29 @@
+{
+    "name": "brush",
+    "version": "0.1.2",
+    "description": "A Responsive Brush for Stylus and Jade",
+    "author": "Priyatam Mudivarti",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/priyatam/brush.git"
+    },
+    "bugs": {
+        "url": "https://github.com/priyatam/brush/issues"
+    },
+    "keywords": [
+        "css3",
+        "stylus",
+        "jade",
+        "rwd",
+        "gulp",
+        "coffee-script"
+    ],
+    "main": [
+        "dist/brush.min.css",
+        "dist/brush.min.js"
+    ],
+    "dependencies": {
+        "stylus": "~0.46.3",
+        "nib": "",
+    }
+}

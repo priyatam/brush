@@ -16,7 +16,9 @@ $(function() {
         }
     });
 
-    // flowtype typography
-
+    // Canvas
+    var ctx = $("#myCanvas").getContext("2d");
+    ctx.fillStyle = "#00FF00";
+    ctx.fillRect(50, 50, 150, 750);
 
 });
