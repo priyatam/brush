@@ -1,6 +1,6 @@
 # Brush
 
-A [Responsive](http://www.adamkaplan.me/grid/) brush for [Stylus](http://learnboost.github.io/stylus/) and [Jade](http://jade-lang.com), built in realtime with [Gulp](http://gulpjs.com)&mdash;in Coffeescript.
+A [Responsive](http://www.adamkaplan.me/grid/) brush for building typographic pages with [Stylus](http://learnboost.github.io/stylus/) and [Jade](http://jade-lang.com). Built in realtime (with live coding and preview) with [Gulp](http://gulpjs.com)&mdash;in Coffeescript.
 
 Pre-configured with JQuery, LetteringJs, [KerningJs](http://kerningjs.com/), [Fittext](http://fittextjs.com/), and [Modernizr](http://modernizr.com/).
 
@@ -22,11 +22,11 @@ Update your local npm modules:
 
     npm install
 
-Create an alias:
+Create an alias (gulp doesn't identitify coffeescript builds):
 
     alias gulp='gulp --require coffee-script/register'
 
-If you have an Amazon S3 account, create a `.aws.json` key file in the root (see `gulp publish`). Ensure that you add this to `.gitignore`.
+If you have an Amazon S3 account, create a `.aws.json` key file in the root (see `gulp publish`). *Don't forget* to ignore this file in git, by adding it to `.gitignore`.
 
   {
     "key": "",
@@ -36,33 +36,31 @@ If you have an Amazon S3 account, create a `.aws.json` key file in the root (see
 
 ## Development
 
-Brush is built with gulp. Run the defaut task from the root:
+There are only two tasks: `gulp` and `gulp publish`.
 
-    gulp
+First, create a sample `.styl`, `.js`, and `.jade` files in a folder (See 'examples/poem').
 
-## Examples
+Run the default task from the root of brush source directory and pass the config:
 
-Create your own stylus, js, and jade files in a folder ('examples').
-
-Run the default task from the root of brush and pass the config:
-
-    gulp --config=examples/config.json
+    gulp --config=examples/poem/config.json
 
 This task does the following:
 
-- compiles _stylus_, _coffee_, _jade_ templates into optimized HTML5/CSS3
-- minifies, uglifies Javascript and CSS3
+- compiles _stylus_, _coffee_, _jade_ templates into an optimized and minified HTML5/CSS3
+- minifies, uglifies Javascript
 - runs a [connect](https://github.com/intesso/connect-livereload) static server with Live Reload at **http://localhost:8080**.
 
-Enjoy [Live coding](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) with Chrome.
+What's more, you can enjoy [Live coding](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) with Chrome with a split screen.
 
-Sync `/app` with S3:
+Once you're ready to share a preview of the page to a client, upload the assets under `/examples/app` to S3:
 
     gulp publish --config=examples/config.json
 
-## Status
+## Status & Roadmap
 
-Development, 0.1.1
+Development, 0.1.2, Unstable.
+
+Work in progress: a rich mixin library with an emphasis on magazine-style grid layouts. Deeper integration with [nib](http://visionmedia.github.io/nib/).
 
 ## Credits
 
