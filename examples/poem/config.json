@@ -1,7 +1,7 @@
 {
-  "styles": "./examples/*.styl",
-  "templates": "./examples/*.jade",
-  "scripts": ["./examples/*.js"],
+  "styles": "./examples/poem/*.styl",
+  "templates": "./examples/poem/*.jade",
+  "scripts": ["./examples/poem/*.js"],
   "app": "./examples/app",
   "app_script": "index.min.js",
   "app_style": "index.min.css",
