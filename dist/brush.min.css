@@ -46,10 +46,6 @@ hr.small{margin:1.5rem auto}
 .circle{border:3px solid #555;border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;color:#555;display:block;font-size:1.7rem;font-weight:600;height:3.2rem;line-height:1.7em;margin:0 auto 1rem;text-align:center;width:3.2rem}
 img{display:block;height:auto;margin:0 auto 1.5rem;width:100%}
 .rwd{margin:0 auto 1.5rem;max-width:440px}
-.example{border-top:none;background-color:#497bad;color:#fff}
-.example p{color:rgba(255,255,255,.7)}
-.example img{margin:0}
-@media (min-width:40rem){.fragmentation{min-height:500px}}
 .mobile-first .column{float:none;margin-bottom:1rem}
 .grid{text-align:center}
 .grid span{background:rgba(225,255,255,.1);border:2px solid rgba(255,255,255,.2);display:block;padding:1rem;font-size:.9rem;font-weight:600}
@@ -68,17 +64,13 @@ img{display:block;height:auto;margin:0 auto 1.5rem;width:100%}
 .border{color:#fce08f}
 .padding{color:#c2ddb6}
 .content{color:#9ec3e5}
-.gist .gist-file{font-size:.9rem!important;margin:0 auto;max-width:39rem;overflow:hidden!important;text-align:left}
-.gist .gist-file .gist-data{background:#f8f8f8!important;border-bottom:none!important}
-.gist .gist-file .gist-meta{display:none!important}
-.gist-syntax .k{color:#555!important;font-weight:400!important}
 *,:after,:before{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html{font:100%/1.5 "Open Sans" sans-serif;font-weight:400;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
 @media (min-width:40rem){html{font-size:112%}}
 @media (min-width:64rem){html{font-size:120%}}
 body{background-color:#fff;color:#555}
 .container{margin:0 auto;max-width:53rem;width:90%}
-body{background-color:#f2f2f2;color:#555;-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;border:10px;padding:10px;margin:10px}
+body{font-size:18px;background-color:#f2f2f2;color:#555;-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;border:10px;padding:10px;margin:10px}
 h1,h2,h3,h4,h5{font-weight:600;margin:0}
 h1{font-size:1.3rem;margin-bottom:1.5rem}
 @media (min-width:40rem){h1{font-size:1.5rem}}
@@ -90,9 +82,15 @@ blockquote p{color:#bbb;font-style:italic;margin-bottom:1.5rem}
 cite{color:#bbb}
 code{background-color:#f8f8f8;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;border:1px solid #ddd;font-family:Consolas "Liberation Mono" Courier monospace;font-size:.8rem;padding:.1rem .3rem;position:relative;top:-1px;white-space:nowrap}
 header{font-size:2em;font-weight:200}
-body{font-family:'Alegreya Sans',sans-serif;font-size:18px}
 .remove-padding{padding-bottom:0}
 .remove-border{border:none}
 .clearfix:after,.clearfix:before{content:" ";display:table}
 .clearfix:after{clear:both}
 .clearfix{*zoom:1}
+.gist .gist-file{font-size:.9rem!important;margin:0 auto;max-width:39rem;overflow:hidden!important;text-align:left}
+.gist .gist-file .gist-data{background:#f8f8f8!important;border-bottom:none!important}
+.gist .gist-file .gist-meta{display:none!important}
+.gist-syntax .k{color:#555!important;font-weight:400!important}
+.example{border-top:none;background-color:#497bad;color:#fff}
+.example p{color:rgba(255,255,255,.7)}
+.example img{margin:0}
