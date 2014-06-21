@@ -1,56 +1,59 @@
-// Example - index.jade
 @import 'nib/gradients'
 
-body
-   background linear-gradient(top, white, black)
-
-.metadata
-  font-size 75%
-  text-align left
-
-.haiku
-  whitespace pre
-  font-family 'EB Garamond', serif
-  font-size 2em
-  font-weight 200
-  text-align center
-  padding 10px
-  border 1px
-  margin 1px
-  line-height 1.2em
-
-p.author
-  padding 1px
-  font-size 1em
-  font-weight 100
-  text-transform uppercase
-  text-align right
-
-a:hover
-  text-decoration none
-  cursor pointer
-
-ul
-  font-size 1em
-  font-weight 100
-  font-style italic
-  margin 0
-  padding 0
-  list-style-type disc
-  text-align left
-  display block
-
-li
-  display inline
-
-a
-  padding 2px
-
-#myCanvas
-  border: 1px solid #9C9890;
-
-.intro
-  margin 2rem 0
+$base_font_serif = 'Sentinel SSm A', 'Sentinel SSm B', serif
+$base_font_sansserif = 'Whitney SSm A', 'Whitney SSm B', sans-serif
 
 body
-  backgrounda linear-gradient(top, white, black)
+  background linear-gradient(top, white, black)
+  font-family $base_font_sansserif
+  font-weight 400
+  font-style normal
+
+  ul.metadata
+    li
+      font-style italic
+      font-size 75%
+      font-weight 300
+
+      a
+        text-align right
+
+  .haiku
+    whitespace pre
+    font-family $base_font_serif
+    font-size 2em
+    font-weight 200
+    text-align center
+    padding 10px
+    border 1px
+    margin 1px
+    line-height 1.2em
+
+  a.author
+    padding 1px
+    font-size 1em
+    font-weight 100
+    text-transform uppercase
+    text-decoration none
+    color brown
+    float right
+
+    &:hover
+      text-decoration none
+      cursor pointer
+
+  ul
+    font-size 1em
+    font-weight 100
+    font-style italic
+    margin 0
+    padding 0
+    list-style-type disc
+    text-align left
+    display block
+
+    li
+      display inline
+
+      a
+        padding 2px
