@@ -41,7 +41,7 @@ gulp.task 'build-styles', ->
     .pipe minifyCSS keepBreaks: true
     .pipe concat config.app_style
     .pipe gulp.dest config.app
-      .pipe connect.reload()
+    .pipe connect.reload()
 
 gulp.task 'build-scripts', ->
   gulp.src config.scripts
@@ -61,7 +61,7 @@ gulp.task 'start-server', ->
     port: config.port
     livereload: true
 
-gulp.task 'open', ->
+gulp.task 'open-chrome', ->
   options =
     url: "http://localhost:" + config.port
     app: "google chrome"
@@ -87,6 +87,6 @@ gulp.task 'publish', ->
     .pipe aws.reporter()
 
 gulp.task('build', ['build-templates', 'build-styles', 'build-scripts'])
-gulp.task('serve', ['build', 'start-server', 'open', 'watch'])
-gulp.task('default', ['build'])
+gulp.task('serve', ['build', 'start-server', 'open-chrome', 'watch'])
+gulp.task('default', ['serve'])
 
