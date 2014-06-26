@@ -2,27 +2,24 @@
 
 A [Responsive](http://www.adamkaplan.me/grid/) brush for building responsive layouts and typography with [Stylus](http://learnboost.github.io/stylus/) and [Jade](http://jade-lang.com). Built in realtime with [Gulp](http://gulpjs.com) and Coffeescript.
 
+Built on top of [nib](http://visionmedia.github.io/nib/).
+
 ## Setup
 
 If you've never used npm before, install Node with [homebrew](http://brew.sh/):
 
     brew install node
 
-Install [Coffeescript](http://gulpjs.com):
-
-    npm install -g coffee-script
-
-Install [gulp](http://gulpjs.com):
+Install [gulp](http://gulpjs.com) and [Coffeescript](http://gulpjs.com), along
+with a command-line alias for `gulp` (to identitify coffee tasks):
 
     npm install -g gulp
+    npm install coffee-script
+    alias gulp='gulp --require coffee-script/register'
 
 Update your local npm modules:
 
     npm install
-
-Create a command-line alias for `gulp` (to identitify coffee tasks):
-
-    alias gulp='gulp --require coffee-script/register'
 
 Optionally, create a `.aws.json` credentials for S3. **Don't forget to put this in `.gitignore`**.
 
@@ -52,7 +49,7 @@ In addition to build, this runs a [connect](https://github.com/intesso/connect-l
 
 **publish**
 
-    gulp publish --config=examples/config.json
+    gulp publish --config=examples/poem/config.json
 
 Publishes your page along with optimized assets (`/examples/app`) to S3.
 
@@ -62,9 +59,8 @@ Development, 0.1.3, _Unstable_.
 
 TODO:
 
-- integration with [nib](http://visionmedia.github.io/nib/)
-- create mixin library for typography and layouts
-- add reusable jade layouts
+- create typography mixins
+- create jade mixins
 
 ## Credits
 
