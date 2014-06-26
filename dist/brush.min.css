@@ -16,7 +16,7 @@
 @keyframes fadeInUp{0%{opacity:0;transform:translateY(20px)}
 100%{opacity:1;transform:translateY(0)}}
 @media (min-width:40rem){.intro{margin:4rem 0}}
-header h1{border:3px solid #fff;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#fff;padding:.4rem .6rem;display:inline-block;font-size:1.8rem;text-transform:uppercase;margin-bottom:2rem}
+header h1{border:3px solid #fff;-moz-border-radius:3px;-webkit-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#fff;padding:.4rem .6rem;display:inline-block;font-size:1.8rem;text-transform:uppercase;margin-bottom:2rem}
 header p{color:rgba(255,255,255,.7);margin:0 auto}
 header a{color:rgba(255,255,255,.9);text-decoration:underline}
 header a:hover{text-decoration:none}
@@ -37,7 +37,7 @@ ul{margin:0;text-align:left}
 @media (min-width:40rem){ul{display:inline-block}}
 a{color:#497bad;text-decoration:none;padding:2px}
 a:hover{text-decoration:underline}
-.button{-moz-appearance:none;-webkit-appearance:none;appearance:none;background-color:#497bad;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;border:none;color:#fff;cursor:pointer;display:block;font-size:1rem;font-weight:600;padding:.7rem 1.5rem;vertical-align:middle;white-space:nowrap}
+.button{-webkit-appearance:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#497bad;-moz-border-radius:3px;-webkit-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;border:none;color:#fff;cursor:pointer;display:block;font-size:1rem;font-weight:600;padding:.7rem 1.5rem;vertical-align:middle;white-space:nowrap}
 .button:hover{background:#5183b6;text-decoration:none}
 @media (min-width:40rem){.button{display:inline-block;font-size:.9rem}}
 hr{border:0;border-top:1px solid #ddd;margin:2rem auto;width:3rem}
@@ -65,12 +65,12 @@ img{display:block;height:auto;margin:0 auto 1.5rem;width:100%}
 .padding{color:#c2ddb6}
 .content{color:#9ec3e5}
 *,:after,:before{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
-html{font:100%/1.5 "Open Sans" sans-serif;font-weight:400;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+html{font:100%/1.5;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
 @media (min-width:40rem){html{font-size:112%}}
 @media (min-width:64rem){html{font-size:120%}}
 body{background-color:#fff;color:#555}
-.container{margin:0 auto;max-width:53rem;width:90%}
-body{font-size:18px;background-color:#f2f2f2;color:#555;-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;border:10px;padding:10px;margin:10px}
+.container{margin:0 auto;width:90%}
+body{font-size:18px;background-color:#f2f2f2;color:#555;border:10px;padding:10px;margin:10px;-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch}
 h1,h2,h3,h4,h5{font-weight:600;margin:0}
 h1{font-size:1.3rem;margin-bottom:1.5rem}
 @media (min-width:40rem){h1{font-size:1.5rem}}
@@ -91,6 +91,3 @@ header{font-size:2em;font-weight:200}
 .gist .gist-file .gist-data{background:#f8f8f8!important;border-bottom:none!important}
 .gist .gist-file .gist-meta{display:none!important}
 .gist-syntax .k{color:#555!important;font-weight:400!important}
-.example{border-top:none;background-color:#497bad;color:#fff}
-.example p{color:rgba(255,255,255,.7)}
-.example img{margin:0}
