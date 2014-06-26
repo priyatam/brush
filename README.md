@@ -10,11 +10,11 @@ If you've never used npm before, install Node with [homebrew](http://brew.sh/):
 
     brew install node
 
-Install [Coffeescript](http://gulpjs.com), globally:
+Install [Coffeescript](http://gulpjs.com):
 
     npm install -g coffee-script
 
-Install [gulp](http://gulpjs.com), globally:
+Install [gulp](http://gulpjs.com):
 
     npm install -g gulp
 
@@ -22,11 +22,11 @@ Update your local npm modules:
 
     npm install
 
-Create an alias (gulp doesn't identitify coffeescript builds):
+Create a command-line alias for `gulp` (gulp doesn't identitify coffeescript builds):
 
     alias gulp='gulp --require coffee-script/register'
 
-If you have an Amazon S3 account, create a `.aws.json` key file in the root (see `gulp publish`). *Don't forget* to ignore this file in git, by adding it to `.gitignore`.
+Finally, if you have an Amazon S3 account, create a `.aws.json` key file in the current folder (see `gulp publish`). *Don't forget* to ignore this file in git, by adding it to `.gitignore`.
 
   {
     "key": "",
@@ -40,19 +40,13 @@ There are only two tasks: `gulp` and `gulp publish`.
 
 First, create a sample `.styl`, `.js`, and `.jade` files in a folder (See 'examples/poem').
 
-Run the default task from the root of brush source directory and pass the config:
+Run the default task from the current directory and pass the project config:
 
     gulp --config=examples/poem/config.json
 
-This task does the following:
+This task compiles _stylus_, _coffee_, and _jade_ templates into an optimized and minified HTML5/CSS3. It also minifies, uglifies Javascript and runs a [connect](https://github.com/intesso/connect-livereload) static server with Live Reload at **http://localhost:8080**. What's more, you can enjoy [Live coding](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) with Chrome with a split screen.
 
-- compiles _stylus_, _coffee_, _jade_ templates into an optimized and minified HTML5/CSS3
-- minifies, uglifies Javascript
-- runs a [connect](https://github.com/intesso/connect-livereload) static server with Live Reload at **http://localhost:8080**.
-
-What's more, you can enjoy [Live coding](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) with Chrome with a split screen.
-
-Once you're ready to share a preview of the page to a client, upload the assets under `/examples/app` to S3:
+Publish a copy for client preview by uploading the assets under `/examples/app` to S3:
 
     gulp publish --config=examples/config.json
 
@@ -60,7 +54,7 @@ Once you're ready to share a preview of the page to a client, upload the assets 
 
 Development, 0.1.2, Unstable.
 
-Work in progress: a rich mixin library with an emphasis on magazine-style grid layouts. Deeper integration with [nib](http://visionmedia.github.io/nib/).
+TODO: Deeper integration with [nib](http://visionmedia.github.io/nib/). A rich mixin library for magazine-style, responsive layouts.
 
 ## Credits
 
