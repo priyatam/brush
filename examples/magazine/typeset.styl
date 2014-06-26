@@ -1,0 +1,115 @@
+@import 'nib/gradients'
+@import '../../responsive-grid'
+
+// TYPE FAMILIES //
+
+base_sans = 'Whitney SSm A', 'Whitney SSm B', sans-serif
+base_serif = 'Sentinel SSm A', 'Sentinel SSm B', serif
+base_condensed1 = 'Knockout 48 A', 'Knockout 48 B', sans-serif
+base_condensed2 = 'Knockout 50 A', 'Knockout 50 B', sans-serif
+secondary_serif = 'Chronicle SSm A', 'Chronicle SSm B', serif
+base_mono = Consolas, 'Liberation Mono', Courier, monospace
+
+// TYPOGRAPHY //
+
+body p
+  background: linear-gradient(top, white, black)
+  font-family: base_sans
+  font-size: 16px;
+  font-weight: 400i;
+  color: #333;
+  line-height: 1.6;
+
+code
+  font-family: 'Fira Mono', serif
+  font-size: 10px
+  color: #333
+  background-color: #cfcfc6
+
+h1,h2
+  font-family: base_condensed1
+  color: #78786c
+  letter-spacing: .15em
+  text-transform: uppercase
+
+h3,h4
+  font-family: base_condensed2
+  color: #78786c
+
+blockquote
+  font-family: base_serif
+  font-weight: 400i
+  font-size: 1.5em
+  color: #cfcfc9
+
+a padding 2px
+  &:hover
+    text-decoration none
+    cursor pointer
+
+// LAYOUT //
+
+body
+  background-color: #dcdad6
+
+#container
+  background-color: #fff
+
+@media screen
+  #container
+    max-width: 1296px
+
+@media ipad vertical
+  #container
+    max-width: 768px
+
+@media ipad horizontal
+  #container
+    max-width: 1024px
+
+@media iphone
+  #container
+    max-width: 640px
+
+// MEDIA //
+
+@media screen
+  #container
+    max-width: 1196px
+
+#column.main
+    max-width: 490px;
+  /* gutters chould be 10px each */
+
+#column.right
+    max-width: 390px
+
+#column.left
+    max-width: 296px
+
+@media ipad vertical
+  #container
+    max-width: 768px
+
+  #column.main
+    max-width: 380px
+
+  #column.right
+    max-width: 338px
+
+@media ipad horizontal
+  #container
+    max-width: 1024px
+  #column.main
+    max-width: 594px
+  #column.right
+    max-width: 400px
+
+@media iphone
+  #container
+    max-width: 640px
+  #column.main
+    max-width: 620px
+
+// UTILITIES //
+

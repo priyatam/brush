@@ -1,0 +1,153 @@
+// Initial baseline ported from Adam Kaplan's http://www.adamkaplan.me/grid/
+
+global-reset()
+
+.clearfix
+  clearfix()
+
+*
+  box-sizing: border-box
+
+.container
+  margin: 0 auto
+  width: 90%
+
+header h1
+  border: 3px solid #fff
+  border-radius (3px)
+  color: #fff
+  padding: .4rem .6rem
+  display: inline-block
+  font-size: 1.8rem
+  text-transform: uppercase
+  margin-bottom: 2rem
+
+header p
+  color: rgba(255,255,255,0.7)
+  margin: 0 auto
+
+header a
+  color: rgba(255,255,255,0.9)
+  text-decoration: underline
+
+header a:hover
+  text-decoration: none
+
+section
+  border-top: 1px solid #eee
+  text-align: center
+  padding: 2rem 0
+
+section:first-of-type
+  border-top: none
+
+  @media (min-width: 40rem)
+    padding: 4rem 0
+
+// Mobile First Grid
+
+.column
+  margin-bottom 1.5rem
+
+  @media (min-width: 40rem)
+    float: left
+    margin: 0
+    padding-left: 1rem
+    padding-right: 1rem
+
+  &.full
+    width: 100%
+
+  &.two-thirds
+    width: 66.7%
+
+  &.half
+    width: 50%
+
+  &.third
+    width: 33.3%
+
+  &.fourth
+    width: 25%
+
+  &.flow-opposite
+    float: right
+
+.row
+  border: 2px solid rgba(255, 255, 255, 0.2)
+  padding: 1rem 1rem 0 1rem
+  margin-bottom: 1rem
+
+  @media (min-width: 40rem)
+    padding: 1rem 0 0 0
+
+  &:last-of-type
+    margin-bottom: 0
+
+.intro
+  @media (min-width 40rem)
+    margin: 4rem 0
+
+.mobile
+  margin: 0 auto
+  max-width 150px
+
+  @media (min-width 40rem)
+    max-width: 250px
+
+// ELEMENTS
+
+a
+  color: #497bad
+  text-decoration: none
+  padding: 2px
+
+  &:hover
+    text-decoration: underline
+
+ul
+  margin: 0
+  text-align: left
+
+  @media (min-width: 40rem)
+    display: inline-block
+
+.button
+  appearance (none)
+  border-radius (3px)
+  background-color: #497bad
+  color: #fff
+  border: none
+  cursor: pointer
+  display: block
+  font-size: 1rem
+  font-weight: 300
+  padding: 0.7rem 1.5rem
+  vertical-align: middle
+  white-space: nowrap
+
+  @media (min-width: 40rem)
+    display: inline-block
+    font-size: 0.9rem
+
+  &:hover
+    background: #5183b6
+    text-decoration: none
+
+hr
+  border: 0
+  border-top: 1px solid #ddd
+  margin: 2rem auto
+  width: 3rem
+
+  @media (min-width: 40rem)
+    margin: 2.5rem auto
+
+  &.small
+    margin: 1.5rem auto
+
+img
+  display: block
+  height: auto
+  margin: 0 auto 1.5rem auto
+  width: 100%

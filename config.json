@@ -1,8 +1,8 @@
 {
-  "styles": "./lib/css/**/*.styl",
-  "templates": "./lib/templates/*.jade",
-  "scripts": ["./lib/js/**/*.js"],
-  "app": "dist",
+  "styles": "./lib/brush/**/*.styl",
+  "templates": "./lib/brush/**/*.jade",
+  "scripts": ["./lib/brush/**/*.js"],
+  "app": "./app",
   "final_script_name" : "brush.min.js",
   "final_style_name": "brush.min.css",
   "port": 8080

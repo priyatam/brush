@@ -31,6 +31,12 @@ gulp.task 'clean', ->
     read: false
     .pipe clean force: true
 
+gulp.task 'default', ->
+  gulp.src config.content
+    .pipe markdown()
+    .pipe gulp.dest config.app
+    .pipe connect.reload()
+
 gulp.task 'build-templates', ->
   data = {}
   gulp.src config.templates
@@ -40,7 +46,7 @@ gulp.task 'build-templates', ->
 
 gulp.task 'build-styles', ->
   gulp.src config.styles
-    .pipe stylus (use: [nib()], errors: true)
+    .pipe stylus (use: [nib()], errors: true, cache: false)
     .pipe minifyCSS keepBreaks: true
     .pipe concat config.final_style_name
     .pipe gulp.dest config.app
@@ -54,10 +60,9 @@ gulp.task 'build-scripts', ->
     .pipe gulp.dest config.app
     .pipe connect.reload()
 
-gulp.task 'refresh-brush-assets', ->
-  dest = if args.dest? then args.config else console.error 'Enter destination folder: --dest=<..>'
-  gulp.src 'dist'
-    .pipe gulp.dest dest
+gulp.task 'refresh-brush', ->
+ gulp.src (config.app + '/' + config.final_style_name)
+    .pipe gulp.dest './dist'
 
 gulp.task 'start-server', ->
   connect.server
@@ -91,6 +96,6 @@ gulp.task 'publish', ->
     .pipe aws.reporter()
 
 gulp.task('build', ['build-templates', 'build-styles', 'build-scripts'])
-gulp.task('serve', ['build', 'start-server', 'open-chrome', 'watch'])
-gulp.task('default', ['serve'])
+gulp.task('develop', ['build', 'start-server', 'open-chrome', 'watch'])
+gulp.task('default', ['develop'])
 
