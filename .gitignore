@@ -1,5 +1,5 @@
 # Ignore generated site
-examples/app
+app
 
 # Ignore AWS credentials
 .aws.json

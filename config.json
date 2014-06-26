@@ -3,7 +3,7 @@
   "templates": "./lib/templates/*.jade",
   "scripts": ["./lib/js/**/*.js"],
   "app": "dist",
-  "app_script" : "brush.min.js",
-  "app_style": "brush.min.css",
+  "final_script_name" : "brush.min.js",
+  "final_style_name": "brush.min.css",
   "port": 8080
 }
