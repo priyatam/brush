@@ -1,8 +1,6 @@
 # Brush
 
-A [Responsive](http://www.adamkaplan.me/grid/) brush for building typographic pages with [Stylus](http://learnboost.github.io/stylus/) and [Jade](http://jade-lang.com). Built in realtime (with live coding and preview) with [Gulp](http://gulpjs.com)&mdash;in Coffeescript.
-
-Pre-configured with JQuery, LetteringJs, [KerningJs](http://kerningjs.com/), [Fittext](http://fittextjs.com/), and [Modernizr](http://modernizr.com/).
+A [Responsive](http://www.adamkaplan.me/grid/) brush for building responsive layouts and typography with [Stylus](http://learnboost.github.io/stylus/) and [Jade](http://jade-lang.com). Built in realtime with [Gulp](http://gulpjs.com) and Coffeescript.
 
 ## Setup
 
@@ -22,43 +20,55 @@ Update your local npm modules:
 
     npm install
 
-Create a command-line alias for `gulp` (gulp doesn't identitify coffeescript builds):
+Create a command-line alias for `gulp` (to identitify coffee tasks):
 
     alias gulp='gulp --require coffee-script/register'
 
-Finally, if you have an Amazon S3 account, create a `.aws.json` key file in the current folder (see `gulp publish`). *Don't forget* to ignore this file in git, by adding it to `.gitignore`.
+Optionally, create a `.aws.json` credentials for S3. **Don't forget to put this in `.gitignore`**.
 
-  {
-    "key": "",
-    "secret": "",
-    "bucket": ""
-  }
+      {
+        "key": "",
+        "secret": "",
+        "bucket": ""
+      }
 
-## Development
+## Development Tasks (Realtime)
 
-There are only two tasks: `gulp` and `gulp publish`.
+Refer `examples/poem`.
 
-First, create a sample `.styl`, `.js`, and `.jade` files in a folder (See 'examples/poem').
+There are three tasks.
 
-Run the default task from the current directory and pass the project config:
+**build**
 
     gulp --config=examples/poem/config.json
 
-This task compiles _stylus_, _coffee_, and _jade_ templates into an optimized and minified HTML5/CSS3. It also minifies, uglifies Javascript and runs a [connect](https://github.com/intesso/connect-livereload) static server with Live Reload at **http://localhost:8080**. What's more, you can enjoy [Live coding](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) with Chrome with a split screen.
+This compiles, minifies, and uglifies (javascript only) _stylus_, _jade_ templates, and _coffee_ files into an optimized HTML5, CSS3m, and Javascript.
 
-Publish a copy for client preview by uploading the assets under `/examples/app` to S3:
+**develop (default)**
+
+    gulp --config=examples/poem/config.json
+
+In addition to build, this runs a [connect](https://github.com/intesso/connect-livereload) server with Live Reload at **http://localhost:8080**. What's more, you can enjoy [Live coding](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) with Chrome. It pairs nicely as a split screen with Sublime or Vim.
+
+**publish**
 
     gulp publish --config=examples/config.json
 
+Publishes your page along with optimized assets (`/examples/app`) to S3.
+
 ## Status & Roadmap
 
-Development, 0.1.2, Unstable.
+Development, 0.1.3, _Unstable_.
 
-TODO: Deeper integration with [nib](http://visionmedia.github.io/nib/). A rich mixin library for magazine-style, responsive layouts.
+TODO:
+
+- integration with [nib](http://visionmedia.github.io/nib/)
+- create mixin library for typography and layouts
+- add reusable jade layouts
 
 ## Credits
 
-The initial responsive grid css is ported from the excellent [grid.css](http://www.adamkaplan.me/grid/) by Adam Kaplan. If you'rew new to responsive design, I recommmend reading his guide.
+Thanks to Adam Kaplan, the initial responsive grid css was ported from his excellent guide at [grid.css](http://www.adamkaplan.me/grid/).
 
 ## License
 
