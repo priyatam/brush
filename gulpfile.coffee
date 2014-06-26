@@ -18,6 +18,9 @@ args        = require('yargs').argv;
 
 config_file = if args.config? then args.config else path.resolve('./config.json')
 config = JSON.parse(fs.readFileSync(config_file, 'utf8'));
+console.log 'READ CONFIG VALUES: '
+for key, value of config
+  console.log "#{key} - #{value}"
 
 gulp.task 'clean', ->
   files = [ config.app + '/*.js',
@@ -39,7 +42,7 @@ gulp.task 'build-styles', ->
   gulp.src config.styles
     .pipe stylus (use: [nib()], errors: true)
     .pipe minifyCSS keepBreaks: true
-    .pipe concat config.app_style
+    .pipe concat config.final_style_name
     .pipe gulp.dest config.app
     .pipe connect.reload()
 
@@ -47,13 +50,14 @@ gulp.task 'build-scripts', ->
   gulp.src config.scripts
     .pipe changed config.app
     .pipe uglify()
-    .pipe concat config.app_script
+    .pipe concat config.final_script_name
     .pipe gulp.dest config.app
     .pipe connect.reload()
 
-gulp.task 'copy-brush-assets', ->
+gulp.task 'refresh-brush-assets', ->
+  dest = if args.dest? then args.config else console.error 'Enter destination folder: --dest=<..>'
   gulp.src 'dist'
-    .pipe gulp.dest 'examples/app'
+    .pipe gulp.dest dest
 
 gulp.task 'start-server', ->
   connect.server
