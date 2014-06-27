@@ -1,51 +1,44 @@
-@import 'nib/gradients'
-@import '../../responsive-grid'
-
 // TYPE FAMILIES //
 
-base_sans = 'Whitney SSm A', 'Whitney SSm B', sans-serif
-base_serif = 'Sentinel SSm A', 'Sentinel SSm B', serif
-base_condensed1 = 'Knockout 48 A', 'Knockout 48 B', sans-serif
-base_condensed2 = 'Knockout 50 A', 'Knockout 50 B', sans-serif
-secondary_serif = 'Chronicle SSm A', 'Chronicle SSm B', serif
-base_mono = Consolas, 'Liberation Mono', Courier, monospace
+base_serif = 'EB Garamond', serif
+base_sans  = 'Alegreya Sans', sans-serif
+base_slab  = 'Roboto Slab', sans-serif
+base_mono  = 'Inconsolata', monospace
 
 // TYPOGRAPHY //
 
-body p
-  background: linear-gradient(top, white, black)
+body
+  font-weight: 200;
+  color: #78786c
+
+p, h1, h2, h3, h4, h5, h6 body
   font-family: base_sans
+
+p
   font-size: 16px;
-  font-weight: 400i;
+  font-weight: 100;
   color: #333;
   line-height: 1.6;
 
-code
-  font-family: 'Fira Mono', serif
-  font-size: 10px
-  color: #333
-  background-color: #cfcfc6
-
-h1,h2
-  font-family: base_condensed1
-  color: #78786c
-  letter-spacing: .15em
-  text-transform: uppercase
-
-h3,h4
-  font-family: base_condensed2
-  color: #78786c
+.infomap
+  font-family: base_serif
+  font-weight: 150;
 
 blockquote
   font-family: base_serif
   font-weight: 400i
   font-size: 1.5em
-  color: #cfcfc9
 
 a padding 2px
   &:hover
     text-decoration none
     cursor pointer
+
+.notice
+  margin: 2rem 2rem
+  font-family: base_slab
+  font-weight: 100
+  font-style: italic
 
 // LAYOUT //
 
@@ -53,28 +46,24 @@ body
   background-color: #dcdad6
 
 #container
-  background-color: #fff
+  background-color: #dcdad6
+  margin: 10px 10px
+  border: 10px 10px
+  padding: 10px 10px
 
-@media screen
-  #container
+  @media screen
     max-width: 1296px
 
-@media ipad vertical
-  #container
+  @media ipad vertical
     max-width: 768px
 
-@media ipad horizontal
-  #container
+  @media ipad horizontal
     max-width: 1024px
 
-@media iphone
-  #container
+  @media iphone
     max-width: 640px
 
-// MEDIA //
-
-@media screen
-  #container
+  @media screen
     max-width: 1196px
 
 #column.main
@@ -110,6 +99,3 @@ body
     max-width: 640px
   #column.main
     max-width: 620px
-
-// UTILITIES //
-
