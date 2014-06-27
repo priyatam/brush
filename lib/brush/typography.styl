@@ -1,9 +1,8 @@
-// Initial baseline ported from Adam Kaplan's http://www.adamkaplan.me/grid/
-
 html
   font: 100%/1.5
+  font-synthesis: none
   text-rendering: optimizeLegibility
-  -webkit-font-smoothing antialiased
+  -webkit-font-smoothing: antialiased
 
   @media (min-width 40rem)
     font-size: 112%
@@ -12,16 +11,23 @@ html
     font-size: 120%
 
 header
+  font-family: $base_serif
   font-size: 2em
   font-weight: 200
 
 body
+p
+  font-family: $base_sans
   font-size: 18px
   border: 10px
   padding: 10px
   margin: 10px
+  font-kering: normal
   -webkit-font-smoothing antialiased
   -webkit-overflow-scrolling touch
+
+h1, h2, h3, h4, h5, h6
+  font-family: $base_sans
 
 h1
   font-weight: 600
@@ -49,26 +55,77 @@ h3
   text-transform: uppercase
   margin-bottom: .5rem
 
+  @media (min-width: 40rem)
+    font-size: 1.3rem
+
 h4
   font-weight: 400
   font-size: 1.2rem
   text-transform: uppercase
   margin-bottom: .4rem
 
-h5
-  font-weight: 400
-  font-size: 1.2rem
-  margin-bottom: .3rem
+  @media (min-width: 40rem)
+    font-size: 1.3rem
 
-h6
-  font-weight: 100
-  font-size: 1rem
-  text-transform: uppercase
+h5
+  font-family: $base_slab
+  font-weight: 400
+  font-style: italic
+  margin-bottom: .2rem
   margin-bottom: .2rem
 
+  @media (min-width: 40rem)
+    font-size: 1.2rem
+
+h6
+  font-family: $base_slab
+  font-weight: 400
+  font-style: italic
+  margin-bottom: .2rem
+
+@media (min-width: 40rem)
+    font-size: 1.0rem
+
 p
-  margin: 0 auto
+  margin: 0 0
   max-width: 30rem
+  font-size: 1em
+
+section
+
+
+aside
+
+
+strong
+  font-synthesis: weight
+
+em
+  font-synthesis: style
+
+span
+
+
+article
+
+
+ul
+  li
+    font-style italic
+    font-size 75%
+    font-weight 300
+
+    a
+      text-align right
+
+ol
+  li
+    font-style italic
+    font-size 75%
+    font-weight 300
+
+    a
+      text-align right
 
 blockquote
   margin: 0
@@ -76,17 +133,26 @@ blockquote
   p
     font-style: italic
     margin-bottom: 1.5rem
+    border: 10px
+    color: 10px
 
 cite
    margin-bottom: 1.5rem
 
 code
+  font-family: $base_mono
   background-color: #f8f8f8
   border-radius(3px)
   border: 1px solid #ddd
-  font-family: base_mono
-  font-size: 0.8rem
+  font-size: 1.5rem
   padding: 0.1rem 0.3rem
   position: relative
   top: -1px
   white-space: nowrap
+
+div
+   margin-bottom: 1.5rem
+
+footer
+  margin-top: 1.5rem
+  margin-bottom: 1.5rem
