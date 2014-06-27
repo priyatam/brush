@@ -1,9 +1,8 @@
 {
-  "styles": "./examples/magazine/*.styl",
+  "contents": ["./docs/**/*.md"],
   "templates": "./examples/magazine/*.jade",
+  "styles": "./examples/magazine/*.styl",
   "scripts": ["./examples/magazine/*.js"],
   "app": "./app",
-  "final_script_name": "index.min.js",
-  "final_style_name": "index.min.css",
   "port": 8080
 }

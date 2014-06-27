@@ -1,9 +1,8 @@
 {
+  "contents": "./examples/poem/*.md",
   "styles": "./examples/poem/*.styl",
   "templates": "./examples/poem/*.jade",
   "scripts": ["./examples/poem/*.js"],
   "app": "./app",
-  "final_script_name": "index.min.js",
-  "final_style_name": "index.min.css",
   "port": 8080
 }

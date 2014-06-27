@@ -1,11 +1,13 @@
-@import 'nib/gradients'
+@import '../../lib/brush'
 
-$base_font_serif = 'Sentinel SSm A', 'Sentinel SSm B', serif
-$base_font_sansserif = 'Whitney SSm A', 'Whitney SSm B', sans-serif
+$base_serif = 'EB Garamond', serif
+$base_sans  = 'Alegreya Sans', sans-serif
+$base_slab  = 'Roboto Slab', sans-serif
+$base_mono  = 'Inconsolata', monospace
 
 body
   background linear-gradient(top, white, black)
-  font-family $base_font_sansserif
+  font-family $base_sans
   font-weight 400
   font-style normal
 
@@ -20,7 +22,7 @@ body
 
   .haiku
     whitespace pre
-    font-family $base_font_serif
+    font-family $base_serif
     font-size 2em
     font-weight 200
     text-align center

@@ -10,28 +10,24 @@ html(lang="en")
       | Haiku with Basho
 
     // Fonts
-    // link(rel='stylesheet' href='//brick.a.ssl.fastly.net/EB+Garamond:400,400i/Open+Sans:400,700')
-    // link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Alegreya+Sans:400')
-    link(rel='stylesheet' href='//cloud.typography.com/8004452/668484/css/fonts.css')
-    link(rel='stylesheet' href='//cloud.typography.com/8004452/719102/css/fonts.css')
+    link(rel='stylesheet' href='//brick.a.ssl.fastly.net/EB+Garamond:200, 200i,400,400i')
+    link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Alegreya+Sans:400')
+    link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Roboto+Slab:100,200,400')
+    link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Inconsolata:100,200,400')
 
     // Styles
     link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css')
-    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css')
-    link(rel='stylesheet', href='/brush.min.css')
     link(rel='stylesheet', href='/index.min.css')
 
     // Scripts
     script(src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js')
-    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
-    script(src='//cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js')
-    script(src='/brush.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js')
     script(src='/index.min.js')
 
 
   body.container
 
-    .row.clearfix
+    .row
       .column
         ul.metadata
           li
@@ -45,14 +41,14 @@ html(lang="en")
           li
             a(href='#search?query=memory+show=any') bugs
 
-    .row.clearfix
+    .row
       .column
         p.haiku
           |  Autumn Moonlight&mdash;<br/>
           |  a worm digs silently<br/>
           |  into the chestnut.<br/>
 
-    .row.clearfix
+    .row
       .column
         a(href='#authors/basho' class="author") Basho
 
