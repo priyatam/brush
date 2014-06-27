@@ -1,22 +1,19 @@
 # Brush
 
-Build responsive pages with [Stylus](http://learnboost.github.io/stylus/) and [Nib](http://visionmedia.github.io/nib/). 
-
-In realtime with [Coffee](http://coffeescript.org) & [Gulp](http://gulpjs.com).  
+Build responsive pages with [Stylus](http://learnboost.github.io/stylus/) and [Nib](http://visionmedia.github.io/nib/), in realtime with [Gulp](http://gulpjs.com).
 
 ## Setup
-    
+
 If you've never used npm before, install Node with [homebrew](http://brew.sh/):
 
     brew install node
 
-Install [gulp](http://gulpjs.com) and [Coffeescript](http://gulpjs.com):
+Install [gulp](http://gulpjs.com):
 
     npm install -g gulp
-    npm install coffee-script
-    
+
 An alias sounds good (to identitify tasks in coffee):
-    
+
     alias gulp='gulp --require coffee-script/register'
 
 Update your local modules:
@@ -39,7 +36,7 @@ There are three tasks.
 
 **build**
 
-Compile, minify, and uglify _stylus_, _jade_, and _coffeescript_.
+Compile, minify, and uglify _stylus_, _jade_, & _coffeescript_.
 
     gulp --config=examples/poem/config.json
 
@@ -65,7 +62,6 @@ TODO:
 
 - typography mixins
 - layout for jade
-- layout for bootstrap
 
 ## Credits
 
