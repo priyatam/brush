@@ -3,6 +3,7 @@ stylus      = require 'gulp-stylus'
 nib         = require 'nib'
 jade        = require 'gulp-jade'
 coffee      = require 'gulp-coffee'
+markdown    = require 'gulp-markdown'
 connect     = require 'gulp-connect'
 minifyCSS   = require 'gulp-minify-css'
 uglify      = require 'gulp-uglify'
@@ -31,8 +32,8 @@ gulp.task 'clean', ->
     read: false
     .pipe clean force: true
 
-gulp.task 'default', ->
-  gulp.src config.content
+gulp.task 'build-contents', ->
+  gulp.src config.contents
     .pipe markdown()
     .pipe gulp.dest config.app
     .pipe connect.reload()
@@ -48,7 +49,7 @@ gulp.task 'build-styles', ->
   gulp.src config.styles
     .pipe stylus (use: [nib()], errors: true, cache: false)
     .pipe minifyCSS keepBreaks: true
-    .pipe concat config.final_style_name
+    .pipe concat 'index.min.css'
     .pipe gulp.dest config.app
     .pipe connect.reload()
 
@@ -56,13 +57,14 @@ gulp.task 'build-scripts', ->
   gulp.src config.scripts
     .pipe changed config.app
     .pipe uglify()
-    .pipe concat config.final_script_name
+    .pipe concat 'index.min.js'
     .pipe gulp.dest config.app
     .pipe connect.reload()
 
 gulp.task 'refresh-brush', ->
  gulp.src (config.app + '/' + config.final_style_name)
-    .pipe gulp.dest './dist'
+    .pipe gulp.dest './app'
+    .pipe connect.reload()
 
 gulp.task 'start-server', ->
   connect.server
@@ -95,7 +97,7 @@ gulp.task 'publish', ->
     .pipe publisher.cache()
     .pipe aws.reporter()
 
-gulp.task('build', ['build-templates', 'build-styles', 'build-scripts'])
+gulp.task('build', ['build-contents', 'build-templates', 'build-styles', 'build-scripts'])
 gulp.task('develop', ['build', 'start-server', 'open-chrome', 'watch'])
 gulp.task('default', ['develop'])
 
