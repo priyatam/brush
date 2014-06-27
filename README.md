@@ -1,23 +1,25 @@
 # Brush
 
-A [Responsive](http://www.adamkaplan.me/grid/) brush for building responsive layouts and typography with [Stylus](http://learnboost.github.io/stylus/) and [Jade](http://jade-lang.com). Built in realtime with [Gulp](http://gulpjs.com) and Coffeescript.
+Build responsive pages with [Stylus](http://learnboost.github.io/stylus/) and [Nib](http://visionmedia.github.io/nib/). 
 
-Built on top of [nib](http://visionmedia.github.io/nib/).
+In realtime with [Coffee](http://coffeescript.org) & [Gulp](http://gulpjs.com).  
 
 ## Setup
-
+    
 If you've never used npm before, install Node with [homebrew](http://brew.sh/):
 
     brew install node
 
-Install [gulp](http://gulpjs.com) and [Coffeescript](http://gulpjs.com), along
-with a command-line alias for `gulp` (to identitify coffee tasks):
+Install [gulp](http://gulpjs.com) and [Coffeescript](http://gulpjs.com):
 
     npm install -g gulp
     npm install coffee-script
+    
+An alias sounds good (to identitify tasks in coffee):
+    
     alias gulp='gulp --require coffee-script/register'
 
-Update your local npm modules:
+Update your local modules:
 
     npm install
 
@@ -37,35 +39,38 @@ There are three tasks.
 
 **build**
 
-    gulp --config=examples/poem/config.json
+Compile, minify, and uglify _stylus_, _jade_, and _coffeescript_.
 
-This compiles, minifies, and uglifies (javascript only) _stylus_, _jade_ templates, and _coffee_ files into an optimized HTML5, CSS3m, and Javascript.
+    gulp --config=examples/poem/config.json
 
 **develop (default)**
 
+Build and run a [connect](https://github.com/intesso/connect-livereload) server with [Live Reload](http://livereload.com), and preview [live](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) with Chrome.
+
     gulp --config=examples/poem/config.json
 
-In addition to build, this runs a [connect](https://github.com/intesso/connect-livereload) server with Live Reload at **http://localhost:8080**. What's more, you can enjoy [Live coding](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) with Chrome. It pairs nicely as a split screen with Sublime or Vim.
+Pairs nicely on a split screen with [Sublime](https://github.com/billymoon/Stylus).
 
 **publish**
 
-    gulp publish --config=examples/poem/config.json
+Publish an optimized page to [S3](http://aws.amazon.com/s3/).
 
-Publishes your page along with optimized assets (`/examples/app`) to S3.
+    gulp publish --config=examples/poem/config.json
 
 ## Status & Roadmap
 
-Development, 0.1.3, _Unstable_.
+Development, 0.2.0, _Unstable_.
 
 TODO:
 
-- create typography mixins
-- create jade mixins
+- typography mixins
+- layout for jade
+- layout for bootstrap
 
 ## Credits
 
-Thanks to Adam Kaplan, the initial responsive grid css was ported from his excellent guide at [grid.css](http://www.adamkaplan.me/grid/).
+A big thanks to Adam Kaplan: I ported the initial responsive grid from his excellent [guide on RWD](http://www.adamkaplan.me/grid/).
 
 ## License
 
-MIT License. See [LICENSE](/LICENSE) for more details.
+MIT, See [LICENSE](/LICENSE) for more details.
